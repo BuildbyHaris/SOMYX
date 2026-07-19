@@ -1,0 +1,313 @@
+/* ==========================================================================
+   GLOBAL LAYOUT BASE
+   ========================================================================== */
+.contact-section {
+  background-color: #faf9f6;
+  width: 100%;
+  padding: 6rem 0 10rem 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 82rem;
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1rem;
+  }
+}
+
+/* ==========================================================================
+   LEFT COLUMN TYPOGRAPHY & INTERACTIVE ROW CARDS
+   ========================================================================== */
+.contact-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Breadcrumb indicator */
+.contact-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.breadcrumb-dot { color: #10b981; font-size: 0.75rem; }
+.breadcrumb-path { font-size: 0.95rem; font-weight: 600; color: #64748b; }
+
+.contact-title {
+  font-size: 4.75rem;
+  font-weight: 800;
+  color: #0c0d12;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.25rem 0;
+}
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0 0 3rem 0;
+}
+.subtitle-highlight { color: #8ba385; font-weight: 500; }
+.subtitle-underline { color: #0c0d12; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+
+/* THE ASYMMETRIC MOCKUP LINK CARDS */
+.contact-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 32rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-row-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 1.25rem;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.005);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.card-left-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Hardcoded graphic SVGs matching the visual brand signatures */
+.brand-icon-frame {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-email {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="%234285F4" d="M45 20v21c0 2.2-1.8 4-4 4H7s-4-1.8-4-4V20l21 13 21-13z"/><path fill="%23FBBC05" d="M45 11.5V20L24 33 3 20v-8.5c0-2.2 1.8-4 4-4h34s4 1.8 4 4z"/><path fill="%23EA4335" d="M24 33L3 20v-8.5C3 9.3 4.8 7.5 7 7.5h10V24l7 5 7-5V7.5h10c2.2 0 4 1.8 4 4V20L24 33z"/><path fill="%2334A853" d="M3 11.5V41c0 2.2 1.8 4 4 4h5V19.5L3 11.5z"/></svg>');
+}
+.icon-whatsapp {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2325D366"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.735-3.834c1.614.957 3.51 1.462 5.461 1.463 5.487 0 9.954-4.43 9.957-9.887.001-2.644-1.026-5.13-2.895-7c-1.868-1.869-4.351-2.898-6.997-2.899-5.49 0-9.959 4.432-9.962 9.89-.001 1.867.489 3.693 1.42 5.305l-.971 3.547 3.637-.954z"/></svg>');
+}
+.icon-linkedin {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230077B5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>');
+}
+
+.brand-text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.brand-meta-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.brand-address-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0c0d12;
+}
+
+.arrow-vector-icon {
+  font-size: 1.1rem;
+  color: #94a3b8;
+}
+
+/* INTERACTIVE ACTIVE ROWS (HOVER TURNS FULL DEEP BLACK) */
+.contact-row-card:hover {
+  background-color: #08090d;
+  border-color: #08090d;
+}
+.contact-row-card:hover .brand-address-label { color: #ffffff; }
+.contact-row-card:hover .brand-meta-tag { color: rgba(255, 255, 255, 0.4); }
+.contact-row-card:hover .arrow-vector-icon { color: #ffffff; }
+
+/* Status Pill */
+.presence-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 0.75rem 1.35rem;
+  border-radius: 2rem;
+}
+.status-pulse-green {
+  width: 0.55rem;
+  height: 0.55rem;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+.status-label-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: EXACT PHOTO-REALISTIC 3D LANYARD ASSEMBLY
+   ========================================================================== */
+.contact-right-graphics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  /* Lifted higher up vertically to mirror the viewport configuration */
+  margin-top: -6rem; 
+}
+
+/* THE WOVEN STRAP MECHANISM */
+.lanyard-physical-strap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.strap-woven-band {
+  width: 1.35rem;
+  height: 14rem; /* Extended height so it descends cleanly from top of screen */
+  background-color: #0c0d12;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1.5rem;
+  box-shadow: inset -3px 0 5px rgba(0,0,0,0.4), 3px 10px 20px rgba(0,0,0,0.15);
+}
+
+.strap-inner-logo-pattern {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.strap-metallic-clip {
+  width: 0.45rem;
+  height: 2rem;
+  background: linear-gradient(90deg, #52525b, #a1a1aa, #3f3f46);
+  margin-top: -1px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.clip-mounting-loop {
+  position: absolute;
+  bottom: -0.4rem;
+  width: 1.15rem;
+  height: 0.65rem;
+  border: 3px solid #71717a;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+/* THE PLASTIC GLOSS ID BADGE HOUSING */
+.lanyard-id-badge-body {
+  width: 16.5rem;
+  height: 23rem;
+  background-color: #0b0c10;
+  border-radius: 0.85rem;
+  position: relative;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 55px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  z-index: 2;
+}
+
+/* Diagonal reflection glare overlay covering the badge */
+.badge-surface-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 40%, transparent 41%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.badge-content-cluster {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Exact typography proportions for 'AS' branding signature */
+.badge-monogram-logo {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+  margin: 0;
+  z-index: 3;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Microscopic design alignment grid artifact */
+.badge-micro-dots-accent {
+  position: absolute;
+  bottom: 4.5rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.badge-logo-container {
+  width: 9rem; 
+  height: 9rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.badge-uploaded-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+
+
+/* Responsive UI scaling rules */
+@media (max-width: 1023px) {
+  .contact-right-graphics {
+    margin-top: 2rem;
+  }
+  .strap-woven-band {
+    height: 8rem;
+  }
+}

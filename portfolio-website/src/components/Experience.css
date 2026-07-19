@@ -1,0 +1,386 @@
+/* ==========================================================================
+   GLOBAL CONFIGURATION & CORE THEME
+   ========================================================================== */
+.experience-section {
+  background-color: #0b0c10; /* Perfect matching reference background black */
+  padding: 8rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.experience-master-wrapper {
+  width: 100%;
+  max-width: 78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Breathing room between Top row and Bottom lists */
+}
+
+/* ==========================================================================
+   PHASE 1: SPLIT ROW STYLES (HEADER BLOCK + WHITE CARD)
+   ========================================================================== */
+.experience-header-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+  width: 93%;
+}
+
+@media (min-width: 1024px) {
+  .experience-header-split {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.exp-left-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.exp-badge-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #16171d;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  margin-bottom: 2rem;
+}
+
+.badge-green-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.badge-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.exp-main-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+}
+
+@media (min-width: 1024px) {
+  .exp-main-heading { font-size: 4.5rem; }
+}
+
+.heading-triangle-glyph {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.25);
+  margin-left: 0.5rem;
+  display: inline-block;
+  transform: rotate(25deg) translateY(-1rem);
+}
+
+.exp-lead-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 30rem;
+  margin: 0;
+}
+
+/* Education White Card Mechanicals */
+.education-white-card {
+  background-color: #ffffff;
+  border-radius: 2.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.edu-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.edu-icon-circle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.edu-header-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.1em;
+}
+
+.edu-degree-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0c0f1d;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.edu-semester-pill {
+  display: inline-block;
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #b45309;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.edu-card-divider {
+  border: none;
+  height: 1px;
+  background-color: #f1f5f9;
+  margin: 0 0 2rem 0;
+}
+
+.edu-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.grid-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.block-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.block-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0c0f1d;
+}
+
+.edu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.5rem;
+}
+
+.enrollment-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-green-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0c0f1d;
+}
+
+.duration-stamp {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+
+/* ==========================================================================
+   PHASE 2: LOWER RUNNING PIPELINE TRACK STREAM LAYOUT
+   ========================================================================== */
+.experience-timeline-stream {
+  position: relative;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+  .experience-timeline-stream {
+    padding-left: 5rem; /* Room for the beautiful custom floating icon spine column */
+  }
+}
+
+/* Spine Connector Line Wire */
+.timeline-spine-track {
+  position: absolute;
+  left: 0.5rem;
+  top: 2rem;
+  bottom: 2rem;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+  .timeline-spine-track { left: 2.25rem; }
+}
+
+/* Floating Scroll Cursor Arrow */
+.timeline-cursor-arrow {
+  position: absolute;
+  top: 40%; /* Smooth mid-field floating layout */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  background-color: #0b0c10;
+  padding: 0.25rem 0;
+}
+
+/* Individual Experience Node Block Wrapper */
+.timeline-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Tight premium padding layout */
+  width: 100%;
+}
+
+.job-timeline-card {
+  position: relative;
+  background-color: #111218; /* Clean dark panel fill contrasting base backdrop */
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.job-timeline-card:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Intersecting Joint Circle on Track Wire */
+.job-logo-anchor {
+  position: absolute;
+  left: -2rem;
+  top: 2.25rem;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .job-logo-anchor { left: -2.75rem; }
+}
+
+.job-logo-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #111218;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Typography Layout Inside Job Panel Content */
+.job-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.job-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.job-role-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.job-badge-pill {
+  font-size: 0.65rem;
+  font-weight: 800;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.job-meta-row {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.job-tagline-narrative {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0 0 1.25rem 0;
+}
+
+/* Custom Gold/Orange Styled Bullet Point System */
+.job-bullets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.job-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.orange-bullet-dot {
+  color: #d97706; /* Crisp dark orange/gold bullet dots perfectly matching reference */
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: -0.1rem;
+}
+
+.bullet-string-content {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}

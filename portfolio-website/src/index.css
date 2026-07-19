@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import "tailwindcss";
+
+
+@theme {
+  --color-brand-bg: #0f172a;    
+  --color-brand-text: #f8fafc;  
+  --color-brand-accent: #2563eb;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: 5rem;    /* py-20 */
+    padding-bottom: 5rem;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+    max-width: 80rem;     /* max-w-7xl */
+    margin-left: auto;    /* mx-auto */
+    margin-right: auto;
+  }
+}

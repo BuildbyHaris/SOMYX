@@ -1,0 +1,218 @@
+/* Core Floating Container Layout */
+.nav-header {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2.5rem);
+  max-width: 80rem;
+  height: 4.5rem;
+  z-index: 100;
+  background: rgba(10, 15, 29, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.35);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Profile Left Layout Block */
+.nav-profile-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  gap: 0.15rem;
+}
+
+.profile-top-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Exact Neon Status Glowing Dot Indicator */
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #22c55e; /* Vibrant Green */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.profile-name {
+  font-size: 1.125re;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* Text Ticker System */
+.ticker-wrapper {
+  height: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  flex-direction: column;
+  animation: vertical-slide 9s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+.ticker-item {
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8; /* Soft Slate Gray for subtitle items */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@keyframes vertical-slide {
+  0%, 25% { transform: translateY(0); }
+  33%, 58% { transform: translateY(-1rem); }
+  66%, 91% { transform: translateY(-2rem); }
+  100% { transform: translateY(-3rem); }
+}
+
+/* Desktop Links Menu */
+.nav-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    position: relative; /* REQUIRED: Anchor point for sliding calculations */
+    padding-bottom: 0.25rem;
+  }
+}
+
+.nav-link-item {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link-item:hover,
+.nav-link-item.active-node {
+  color: #ffffff; /* Turns bright white when active or hovered */
+}
+
+/* ==========================================================================
+   DYNAMIC HORIZONTAL MOVING SLIDE LINE TRACK WITH CENTRAL MOVING GLOW DOT
+   ========================================================================== */
+.navbar-moving-line-track {
+  position: absolute;
+  bottom: -4px; /* Suspended cleanly right under your menu options */
+  left: 0;
+  height: 2px;
+  background-color: #10b981; /* High-contrast active green line track */
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), width 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.25s ease;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+/* The neon laser dot node centering directly on your shifting line link indicator */
+.navbar-moving-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981, 0 0 16px #10b981;
+}
+
+/* Right Side Actions & Premium Button Layer */
+.nav-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-talk-btn {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 0.75rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-talk-btn:hover {
+  background: #22c55e;
+  border-color: #3b82f6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Mobile Toggle Layer Layout */
+.mobile-toggle-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .mobile-toggle-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    position: fixed;
+    top: 6.5rem;
+    left: 1.25rem;
+    width: calc(100% - 2.5rem);
+    background: #0a0f1d;
+    border: 1px solid rgba(51, 65, 85, 0.4);
+    border-radius: 1rem;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  /* Safe mobile fallbacks to deactivate horizontal calculation styles on compact panels */
+  .navbar-moving-line-track {
+    display: none !important;
+  }
+  
+  .nav-link-item.active-node {
+    border-left: 3px solid #10b981;
+    padding-left: 0.5rem;
+  }
+}

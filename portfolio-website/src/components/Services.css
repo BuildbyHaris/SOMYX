@@ -1,0 +1,333 @@
+/* ==========================================================================
+   GLOBAL SERVICES STRUCTURE
+   ========================================================================== */
+.services-section {
+  background-color: #faf9f6;
+  width: 100%;
+  padding: 7rem 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 82rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.services-container + .services-container {
+  margin-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 82rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Breadcrumbs & Header Typography */
+.services-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.services-dot { color: #10b981; font-size: 0.8rem; }
+.services-track-text { font-size: 0.95rem; font-weight: 600; color: #64748b; }
+
+.services-header-block { max-width: 44rem; margin-bottom: 4.5rem; }
+.services-title { font-size: 3rem; font-weight: 800; color: #0c0d12; letter-spacing: -0.04em; margin: 0 0 1.25rem 0; }
+.services-subtitle { font-size: 1.25rem; line-height: 1.7; color: #64748b; }
+.text-highlight { color: #0c0d12; font-weight: 600; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
+
+/* ==========================================================================
+   MASTER VERTICAL CARD STACK LAYOUT
+   ========================================================================== */
+.services-master-flow-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* SIDE-BY-SIDE IN FRONT ROW WRAPPER */
+.services-infront-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .services-infront-row {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* UNIVERSAL BASE CARD FORMATTING */
+.independent-service-card {
+  background-color: #ffffff;
+  border-radius: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Left Content Layout Blocks */
+.card-text-content {
+  padding: 4rem 4rem 0 4rem;
+  z-index: 5;
+  position: relative;
+}
+
+.card-pill-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+.card-feature-heading { font-size: 2.25rem; font-weight: 800; color: #0c0d12; letter-spacing: -0.03em; margin: 0 0 1rem 0; }
+.card-feature-description { font-size: 1.05rem; line-height: 1.65; color: #64748b; margin: 0; }
+
+/* ==========================================================================
+   THE CORRECTION PROOF: SECURELY DISPLAYED HARDWARE CONTAINER OBJECTS
+   ========================================================================== */
+.split-feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Removed layout min-height constraints so card content sizes naturally */
+}
+
+/* Browser Mockup Window Frame (Stops bottom crop artifact) */
+.browser-mockup-frame {
+  width: calc(100% - 7rem);
+  margin: 3.5rem auto 3.5rem auto; /* Safe bottom margin spacing instead of overflow cropping */
+  background-color: #18181b;
+  border-radius: 1.25rem; /* Full rounded corners so it doesn't look cut off */
+  padding: 0.85rem;
+  box-sizing: border-box;
+}
+.browser-top-bar { display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.85rem; }
+.browser-window-dots { display: flex; gap: 0.45rem; }
+.window-dot { width: 0.65rem; height: 0.65rem; border-radius: 50%; }
+.window-dot.red { background-color: #ef4444; }
+.window-dot.yellow { background-color: #f59e0b; }
+.window-dot.green { background-color: #10b981; }
+.browser-address-field { background-color: rgba(255, 255, 255, 0.08); border-radius: 0.5rem; padding: 0.4rem 2.5rem; display: flex; align-items: center; gap: 0.4rem; }
+.address-url { color: rgba(255, 255, 255, 0.4); font-size: 0.65rem; white-space: nowrap; overflow: hidden; }
+.browser-utility-icons { color: rgba(255, 255, 255, 0.3); font-size: 0.95rem; }
+.browser-viewport-screen { width: 100%; aspect-ratio: 16 / 10; background-color: #27272a; border-radius: 0.6rem; overflow: hidden; }
+
+/* Smartphone Mockup Frame (Ensures entire device shows beautifully) */
+.smartphone-mockup-frame {
+  width: 16.5rem;
+  height: 25rem; /* Explicit structural layout size limits boundary overflow errors */
+  background-color: #18181b;
+  border-radius: 2.5rem; /* Clean full structural border framing */
+  margin: 3.5rem auto 3.5rem auto; /* Sits completely balanced within card container rows */
+  position: relative;
+  padding: 0.85rem;
+  box-sizing: border-box;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+.phone-earpiece-notch { position: absolute; top: 1.35rem; left: 50%; transform: translateX(-50%); width: 4.5rem; height: 0.95rem; background-color: #18181b; border-radius: 1rem; z-index: 10; }
+.phone-screen-viewport { width: 100%; height: 100%; background-color: #27272a; border-radius: 1.85rem; overflow: hidden; }
+
+/* Aspect lock layout assets engine */
+.mockup-video-asset {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   BUILT FOR THE WORLD WIDE BANNER CARD
+   ========================================================================== */
+.global-distribution-banner-card {
+  padding: 5rem 4.5rem;
+  min-height: 26rem;
+  display: flex;
+  align-items: center;
+}
+
+.global-text-left-panel {
+  max-width: 28rem;
+  z-index: 10;
+  position: relative;
+}
+.global-title { font-size: 2.75rem; font-weight: 800; color: #0c0d12; letter-spacing: -0.04em; margin: 0 0 1rem 0; }
+.global-description { font-size: 1.1rem; line-height: 1.7; color: #64748b; margin: 0 0 2.5rem 0; }
+.global-cta-black-btn { background-color: #0c0d12; color: #ffffff; border: none; padding: 1.1rem 2.5rem; border-radius: 2rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: transform 0.2s ease; }
+.global-cta-black-btn:hover { transform: translateY(-2px); }
+
+/* Custom quadrant positioning grid masking hemisphere precisely */
+.global-globe-right-panel {
+  position: absolute;
+  bottom: -90px;
+  right: -90px;
+  width: 32rem; 
+  height: 32rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.canvas-container-viewport {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   DYNAMIC LOWER MARQUEE TECH TICKER
+   ========================================================================== */
+.tech-stack-ticker-card {
+  padding: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.ticker-meta-upper-row { display: flex; flex-direction: column; gap: 2rem; justify-content: space-between; align-items: flex-start; }
+@media (min-width: 992px) { .ticker-meta-upper-row { flex-direction: row; align-items: flex-end; } }
+.ticker-title-left { max-width: 36rem; }
+.ticker-pill-headline { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.65rem; }
+.headline-green-dot { color: #10b981; font-size: 1.50rem; }
+.ticker-pill-headline h4 { font-size: 1.50rem; font-weight: 800; color: #0c0d12; margin: 0; }
+.ticker-sub-text { font-size: 0.95rem; line-height: 1.6; color: #64748b; margin: 0; }
+
+.ticker-segmented-filter-nav { background-color: #f1f5f9; padding: 0.35rem; border-radius: 2rem; display: flex; gap: 0.25rem; }
+.segment-tab-btn { background: transparent; border: none; padding: 0.6rem 1.6rem; font-size: 0.8rem; font-weight: 700; color: #64748b; cursor: pointer; border-radius: 1.5rem; transition: all 0.2s ease; }
+.segment-tab-btn.active { background-color: #ffffff; color: #0c0d12; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+
+.ticker-infinite-marquee-tape { width: 100%; overflow: hidden; position: relative; display: flex; flex-direction: column; gap: 1.5rem; }
+.ticker-infinite-marquee-tape::after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: linear-gradient(to right, #ffffff 0%, transparent 15%, transparent 85%, #ffffff 100%); pointer-events: none; z-index: 2; }
+.marquee-content-running-loop { display: flex; gap: 1.5rem; width: max-content; animation: marqueeContinuousSlider 35s linear infinite; }
+.ticker-infinite-marquee-tape:hover .marquee-content-running-loop { animation-play-state: paused; }
+.marquee-icon-node { display: flex; align-items: center; gap: 0.75rem; background-color: #faf9f6; border: 1px solid rgba(0, 0, 0, 0.03); padding: 0.85rem 1.75rem; border-radius: 1rem; }
+.node-graphic-icon { font-size: 1.25rem; }
+.node-label-title { font-size: 0.9rem; font-weight: 700; color: #334155; }
+.marquee-footer-track-hint { display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-weight: 600; color: #94a3b8; padding: 0 0.5rem; }
+
+@keyframes marqueeContinuousSlider {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+/* ==========================================================================
+   EMPOWERING STARTUP SUCCESS - FULL WIDTH SECTION
+   ========================================================================== */
+.empowering-startup-fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #0b0c10;
+  padding: 5rem 2rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+}
+
+.empowering-inner-wrap {
+  max-width: 82rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .empowering-inner-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.empowering-image-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.empowering-illustration {
+  width: 100%;
+  max-width: 34rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.empowering-text-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.empowering-top-line {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background-color: #e11d2a;
+  margin-bottom: 1.5rem;
+}
+
+.empowering-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.75rem 0;
+  line-height: 1.2;
+}
+
+.empowering-heading .highlight-red {
+  color: #e11d2a;
+}
+
+.empowering-heading .highlight-white {
+  color: #ffffff;
+}
+
+.empowering-description {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #b8bcc4;
+  margin: 0 0 1.25rem 0;
+}
+
+.empowering-cta-btn {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #e11d2a;
+  padding: 1rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 27px;
+}
+
+.empowering-cta-btn:hover {
+  background-color: #e11d2a;
+  transform: translateY(-2px);
+}

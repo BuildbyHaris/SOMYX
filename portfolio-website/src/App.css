@@ -1,0 +1,34 @@
+/* Core Structural Application Wrapper */
+.app-root-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #0a0f1d;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+/* Dynamic Route Viewport Element */
+.app-main-content {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Standardized Layout Footer Area */
+.app-global-footer {
+  width: 100%;
+  background-color: #0a0f1d;
+  border-top: 1px solid rgba(15, 23, 42, 0.6);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 10;
+}

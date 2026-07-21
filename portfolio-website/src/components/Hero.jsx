@@ -5,7 +5,7 @@ import claudesvg from '../assets/Claude.png';
 
 export default function Hero() {
   const skills = [
-    'Adobe Illustrator','Adobe PhotoShop','Adobe Premier Pro','Canva','Logo & Brand Identity','Childern Book','Social Media Management',  
+    'Adobe Illustrator','Adobe PhotoShop','Adobe Premier Pro','Canva','Logo & Brand Identity','Childern Book Illustration','Digital Marketing',  
     'Graphic Design', 'Video Editing','AI Video Generation','LANDING PAGES','WORDPRESS'
   ];
 

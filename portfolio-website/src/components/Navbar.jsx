@@ -87,7 +87,7 @@ export default function Navbar() {
               <span className="ticker-item">Graphic Designer</span>
               <span className="ticker-item">Open to Freelance</span>
               <span className="ticker-item">Wordpress Developer</span>
-              <span className="ticker-item">Graphic Designer</span>
+              <span className="ticker-item">Digital Marketing</span>
             </div>
           </div>
         </Link>

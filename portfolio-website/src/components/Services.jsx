@@ -8,11 +8,11 @@ export default function Services() {
 
   const techData = {
     Services: [
-      { name: 'Logo Design' }, { name: 'Brand Identity' }, { name: 'Childern Book Design' },
-      { name: 'Social Media Design' }, { name: 'Business Card Design' }, { name: 'Stationary Design' }, { name: 'AI Video Generation' }, { name: 'Ads Design' }, { name: 'Video Editing' }, { name: 'AI image Generation' }, { name: 'Bussiness Website' }, { name: 'Landing Page' }
+      { name: 'Logo Design' }, { name: 'Brand Identity' }, { name: 'Childern Book Illustration' },
+      { name: 'Digital Marketing' }, { name: 'Business Card Design' }, { name: 'Stationary Design' }, { name: 'AI Video Generation' }, { name: 'Ads Design' }, { name: 'Video Editing' }, { name: 'AI image Generation' }, { name: 'Bussiness Website' }, { name: 'Landing Page' }
     ],
     Tools: [
-      { name: 'Adobe Illustrate' }, { name: 'Adobe PhotoShop' }, { name: 'Canva' }, { name: 'Adobe FireFly' }, { name: 'Abobe PremierPro' },
+      { name: 'Adobe Illustrator' }, { name: 'Adobe PhotoShop' }, { name: 'Canva' }, { name: 'Adobe FireFly' }, { name: 'Abobe PremierPro' },
       { name: 'OpenAI' }, { name: 'Veo3' },
       { name: 'Claude AI' }, { name: 'Gemini' }, { name: 'Grok' }, { name: 'wordpress' }
     ]

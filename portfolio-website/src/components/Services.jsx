@@ -56,7 +56,7 @@ export default function Services() {
               <span className="highlight-red">Business Grow</span>
             </h3>
             <p className="empowering-description">
-              Every successful business starts with a strong brand and a professional online presence. I help startups, small businesses, and established brands create impactful visual identities through branding, graphic design, WordPress websites, children's book design, AI-generated images and videos, and digital marketing.            </p>
+              Every successful business starts with a strong brand and a professional online presence. I help startups, small businesses, and established brands create impactful visual identities through branding, graphic design, WordPress websites, AI-generated images and videos, and digital marketing.            </p>
             <p className="empowering-description">
               By combining creativity with practical strategies, I deliver solutions that help businesses attract customers, build credibility, and grow with confidence.            </p>
             <button

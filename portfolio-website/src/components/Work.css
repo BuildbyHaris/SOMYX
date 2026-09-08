@@ -62,7 +62,7 @@
 }
 
 .work-main-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #0c0d12;
   letter-spacing: -0.04em;
@@ -81,6 +81,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  white-space: nowrap;
 }
 
 .filter-label-prefix {
@@ -114,6 +115,7 @@
   cursor: pointer;
   border-radius: 1.5rem;
   transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  
 }
 
 /* Activated State Slid Capsule Frame styling */

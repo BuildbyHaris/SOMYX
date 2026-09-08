@@ -148,12 +148,12 @@
 .nav-actions-group {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .nav-talk-btn {
-  font-size: 0.825rem;
-  font-weight: 600;
+  font-size: 0.829rem;
+  font-weight: 500;
   color: #ffffff;
   text-decoration: none;
   padding: 0.625rem 1.25rem;

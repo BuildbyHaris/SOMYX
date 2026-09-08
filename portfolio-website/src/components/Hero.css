@@ -95,8 +95,8 @@
 .hero-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2.25rem;
+  gap: 0rem;
+  padding: 0.7rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
   font-size: 0.95rem;

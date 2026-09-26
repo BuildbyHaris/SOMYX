@@ -8,30 +8,30 @@ const TIMELINE_DATA = [
     company: "FIVERR",
     companyIcon: "🟩", 
     duration: "2021 — Present",
-    tagline: "Working with international clients — mostly US & Uk based — delivering Designs and earning 5-star ratings.",
+    tagline: "Working with international clients — mostly US & UK based — delivering designs and earning 5-star ratings.",
     bullets: [
-      "Built projects for US & Uk clients with 5-star ratings.",
-      "Logo & Brand Identity, Childern Books, Social Media Designs — fully remote"
+      "Built projects for US & UK clients with 5-star ratings.",
+      "Logo & Brand Identity, Children's Books, Social Media Designs — fully remote"
     ]
   },
   {
-    role: "AI Video & Image Generation ",
+    role: "AI Video & Image Generation",
     badge: "CONTRACT",
     company: "SeeBiz",
     companyIcon: "🔷", 
-    duration: "jan 2025 — jul 2026",
-    tagline: "Worked in SeeBiz for 1 year Creating AI videos & Images for the startup ecosystem and internal teams.",
+    duration: "Jan 2025 — Jul 2026",
+    tagline: "Worked in SeeBiz for 1 year creating AI videos & images for the startup ecosystem and internal teams.",
     bullets: [
-      "Create high quality AI videos & images",
+      "Created high quality AI videos & images",
       "Gained real client-facing experience in a professional setting"
     ]
   },
   {
     role: "WordPress Developer",
     badge: "ON-SITE · LAHORE",
-    company: "ASQAURE TEC / SOFTWARE HOUSE",
+    company: "ASQUARE TEC / SOFTWARE HOUSE",
     companyIcon: "⚫",
-    duration: "Jun 2023 —  August 2024",
+    duration: "Jun 2023 — Aug 2024",
     tagline: "1-Year on-site role at a software house in Lahore — first professional experience in a real team environment.",
     bullets: [
       "Built client websites with theme customization & plugin setup",
@@ -134,8 +134,8 @@ export default function Experience() {
                   </div>
 
                   <div className="job-meta-row">
-                    <span className="job-company-name">🏢 {job.company}</span>
-                    <span className="job-calendar-duration">📅 {job.duration}</span>
+                    <span className="job-meta-item">🏢 {job.company}</span>
+                    <span className="job-meta-item">📅 {job.duration}</span>
                   </div>
 
                   <p className="job-tagline-narrative">{job.tagline}</p>

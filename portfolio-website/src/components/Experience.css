@@ -3,11 +3,18 @@
    ========================================================================== */
 .experience-section {
   background-color: #0b0c10; /* Perfect matching reference background black */
-  padding: 8rem 2rem;
+  padding: 5rem 1.25rem;
   width: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  overflow: hidden; /* Prevents raw child translation overflows */
+}
+
+@media (min-width: 768px) {
+  .experience-section {
+    padding: 8rem 2rem;
+  }
 }
 
 .experience-master-wrapper {
@@ -15,7 +22,13 @@
   max-width: 78rem;
   display: flex;
   flex-direction: column;
-  gap: 6rem; /* Breathing room between Top row and Bottom lists */
+  gap: 4rem; /* Breathing room between Top row and Bottom lists */
+}
+
+@media (min-width: 1024px) {
+  .experience-master-wrapper {
+    gap: 6rem;
+  }
 }
 
 /* ==========================================================================
@@ -24,14 +37,15 @@
 .experience-header-split {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3.5rem;
+  gap: 2.5rem;
   align-items: flex-start;
-  width: 93%;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
   .experience-header-split {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.10fr 0.90fr;
+    gap: 3.5rem;
   }
 }
 
@@ -39,6 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .exp-badge-tag {
@@ -48,8 +63,14 @@
   background-color: #16171d;
   padding: 0.5rem 1.25rem;
   border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.02);
-  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .exp-badge-tag {
+    margin-bottom: 2rem;
+  }
 }
 
 .badge-green-dot {
@@ -67,47 +88,80 @@
 }
 
 .exp-main-heading {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2.25rem;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin: 0 0 1.5rem 0;
+  line-height: 1.15;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .exp-main-heading {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .exp-main-heading { font-size: 4.5rem; }
+  .exp-main-heading { 
+    font-size: 4.5rem; 
+  }
 }
 
 .heading-triangle-glyph {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.25);
   margin-left: 0.5rem;
   display: inline-block;
-  transform: rotate(25deg) translateY(-1rem);
+  transform: rotate(25deg) translateY(-0.5rem);
+}
+
+@media (min-width: 768px) {
+  .heading-triangle-glyph {
+    font-size: 1.5rem;
+    transform: rotate(25deg) translateY(-1rem);
+  }
 }
 
 .exp-lead-text {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   color: #64748b;
-  max-width: 30rem;
+  max-width: 32rem;
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .exp-lead-text {
+    font-size: 1.2rem;
+  }
+}
+
 /* Education White Card Mechanicals */
+.edu-card-container {
+  width: 100%;
+}
+
 .education-white-card {
   background-color: #ffffff;
-  border-radius: 2.25rem;
-  padding: 1.75rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 1.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .education-white-card {
+    border-radius: 2.25rem;
+    padding: 2.25rem;
+  }
 }
 
 .edu-card-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .edu-icon-circle {
@@ -129,11 +183,18 @@
 }
 
 .edu-degree-title {
-  font-size: 1.85rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #0c0f1d;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
   letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .edu-degree-title {
+    font-size: 1.85rem;
+  }
 }
 
 .edu-semester-pill {
@@ -141,25 +202,32 @@
   background-color: #fffbeb;
   border: 1px solid #fde68a;
   color: #b45309;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .edu-card-divider {
   border: none;
   height: 1px;
   background-color: #f1f5f9;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .edu-details-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: 1fr; /* Clean single column for mobile */
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 480px) {
+  .edu-details-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns starting from medium mobile views */
+    gap: 1.5rem;
+  }
 }
 
 .grid-info-block {
@@ -169,24 +237,40 @@
 }
 
 .block-label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #94a3b8;
   letter-spacing: 0.05em;
 }
 
 .block-value {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #0c0f1d;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .block-value {
+    font-size: 1.05rem;
+  }
 }
 
 .edu-card-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   border-top: 1px solid #f1f5f9;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+@media (min-width: 480px) {
+  .edu-card-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .enrollment-status {
@@ -221,12 +305,13 @@
 .experience-timeline-stream {
   position: relative;
   width: 100%;
-  padding-left: 2rem;
+  padding-left: 1.75rem; /* Clean compact indentation to save mobile space */
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .experience-timeline-stream {
-    padding-left: 5rem; /* Room for the beautiful custom floating icon spine column */
+    padding-left: 5rem; /* Room for the professional desktop spine column */
   }
 }
 
@@ -234,24 +319,26 @@
 .timeline-spine-track {
   position: absolute;
   left: 0.5rem;
-  top: 2rem;
-  bottom: 2rem;
+  top: 1rem;
+  bottom: 1rem;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.08);
 }
 
 @media (min-width: 768px) {
-  .timeline-spine-track { left: 2.25rem; }
+  .timeline-spine-track { 
+    left: 2.25rem; 
+  }
 }
 
 /* Floating Scroll Cursor Arrow */
 .timeline-cursor-arrow {
   position: absolute;
-  top: 40%; /* Smooth mid-field floating layout */
+  bottom: -0.5rem;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-size: 0.75rem;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.65rem;
   background-color: #0b0c10;
   padding: 0.25rem 0;
 }
@@ -260,100 +347,159 @@
 .timeline-cards-stack {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Tight premium padding layout */
+  gap: 1.5rem;
   width: 100%;
 }
 
 .job-timeline-card {
   position: relative;
   background-color: #111218; /* Clean dark panel fill contrasting base backdrop */
-  border: 1px solid rgba(255, 255, 255, 0.02);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
   width: 100%;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .job-timeline-card {
+    border-radius: 1.5rem;
+    padding: 2.25rem;
+  }
 }
 
 .job-timeline-card:hover {
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Intersecting Joint Circle on Track Wire */
 .job-logo-anchor {
   position: absolute;
-  left: -2rem;
-  top: 2.25rem;
+  left: -1.25rem; /* Matches dynamic mobile 0.5rem wire tracking minus padding offset */
+  top: 2rem;
   transform: translateX(-50%);
   z-index: 10;
 }
 
 @media (min-width: 768px) {
-  .job-logo-anchor { left: -2.75rem; }
+  .job-logo-anchor { 
+    left: -2.75rem; /* Standard positioning matching desktop track layout */
+  }
 }
 
 .job-logo-circle {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.85rem;
+  height: 1.85rem;
   background-color: #111218;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .job-logo-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
 }
 
 /* Typography Layout Inside Job Panel Content */
 .job-card-body {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .job-header-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  width: 100%;
 }
 
 .job-title-group {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .job-title-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 .job-role-text {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .job-role-text {
+    font-size: 1.35rem;
+  }
 }
 
 .job-badge-pill {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 800;
   background-color: #ffffff;
   color: #000000;
-  padding: 0.25rem 0.65rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 2rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .job-meta-row {
   display: flex;
-  gap: 1.5rem;
-  font-size: 0.85rem;
+  flex-direction: column; /* Stack details vertically on mobile */
+  gap: 0.5rem;
+  font-size: 0.8rem;
   color: #64748b;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .job-meta-row {
+    flex-direction: row; /* Row presentation on tablets upwards */
+    gap: 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+.job-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .job-tagline-narrative {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #94a3b8;
   margin: 0 0 1.25rem 0;
+}
+
+@media (min-width: 768px) {
+  .job-tagline-narrative {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
 }
 
 /* Custom Gold/Orange Styled Bullet Point System */
@@ -369,18 +515,31 @@
 .job-bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .job-bullet-item {
+    gap: 0.75rem;
+  }
 }
 
 .orange-bullet-dot {
-  color: #d97706; /* Crisp dark orange/gold bullet dots perfectly matching reference */
-  font-size: 1.1rem;
+  color: #d97706; /* Crisp premium dark gold bullet matching reference */
+  font-size: 1rem;
   line-height: 1;
-  margin-top: -0.1rem;
+  margin-top: 0.1rem;
 }
 
 .bullet-string-content {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #64748b;
-  line-height: 1.5;
+  line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+  .bullet-string-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }

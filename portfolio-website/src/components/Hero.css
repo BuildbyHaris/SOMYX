@@ -1,322 +1,1261 @@
 /* ==========================================================================
-   HERO MASTER GATEWAY SETUP (WARM OFF-WHITE CANVAS)
+   HERO MASTER SECTION
    ========================================================================== */
+
 .hero-section {
-  background-color: #f9f9fb; /* Exact bright premium off-white shade from video */
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
+
   box-sizing: border-box;
+
+  background-color: #f9f9fb;
+
   padding-top: 6rem;
-  overflow: hidden;
+
+  overflow-x: hidden;
 }
+
+
+/* ==========================================================================
+   MAIN HERO CONTAINER
+   ========================================================================== */
 
 .hero-master-container {
   width: 100%;
   max-width: 80rem;
+
+  min-height: calc(100vh - 6rem);
+
   padding: 2rem;
+
+  box-sizing: border-box;
+
   display: grid;
   grid-template-columns: 1fr;
+
   gap: 4rem;
+
   align-items: center;
+
   flex: 1;
 }
 
+
+/* ==========================================================================
+   DESKTOP LAYOUT
+   ========================================================================== */
+
 @media (min-width: 992px) {
+
   .hero-master-container {
     grid-template-columns: 1.1fr 0.9fr;
   }
+
 }
 
+
 /* ==========================================================================
-   LEFT CONTENT: TEXT NODES AND HIGHLIGHT LINES
+   LEFT CONTENT
    ========================================================================== */
+
 .hero-left-content {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  position: relative;
+
   z-index: 20;
 }
 
+
+/* ==========================================================================
+   MAIN NAME
+   ========================================================================== */
+
 .hero-primary-name {
+  margin: 0 0 1.5rem;
+
   font-size: 3.5rem;
+  line-height: 1.05;
+
   font-weight: 800;
-  color: #0c0d12;
+
   letter-spacing: -0.04em;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.1;
+
+  color: #0c0d12;
 }
+
 
 @media (min-width: 1200px) {
-  .hero-primary-name { font-size: 5.25rem; }
+
+  .hero-primary-name {
+    font-size: 5.25rem;
+  }
+
 }
+
+
+/* ==========================================================================
+   DESCRIPTION
+   ========================================================================== */
 
 .hero-narrative-description {
+  width: 100%;
+  max-width: 24rem;
+
+  margin: 0 0 2.5rem;
+
   font-size: 1.15rem;
   line-height: 1.75;
+
   color: #52525b;
-  max-width: 24rem;
-  margin: 0 0 2.5rem 0;
 }
+
+
+/* Tablet / larger screens */
 
 @media (min-width: 768px) {
-  .hero-narrative-description { font-size: 1.29rem; }
+
+  .hero-narrative-description {
+    font-size: 1.29rem;
+  }
+
 }
 
-/* Underline decoration markers matching the video reference frames */
+
+/* ==========================================================================
+   TEXT HIGHLIGHTS
+   ========================================================================== */
+
 .highlight-text-node {
-  color: #0c0d12;
-  font-weight: 600;
   position: relative;
+
+  color: #0c0d12;
+
+  font-weight: 600;
 }
 
 .highlight-text-node::after {
   content: '';
+
   position: absolute;
-  bottom: 1px;
+
   left: 0;
+  bottom: 1px;
+
   width: 100%;
   height: 1.5px;
+
   background-color: #0c0d12;
 }
 
-/* Dual Action Button Group Layout */
+
+/* ==========================================================================
+   CTA BUTTONS
+   ========================================================================== */
+
 .hero-actions-row {
   display: flex;
   align-items: center;
+
   gap: 1.25rem;
+
   flex-wrap: wrap;
 }
 
 .hero-cta-btn {
+  min-height: 2.75rem;
+
   display: inline-flex;
   align-items: center;
-  gap: 0rem;
-  padding: 0.7rem 2rem;
-  border-radius: 2rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
+  justify-content: center;
+
+  gap: 0.25rem;
+
+  padding: 0.7rem 1.7rem;
+
   box-sizing: border-box;
-  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+
+  border-radius: 2rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+
+/* Primary */
 
 .hero-cta-btn.primary-dark {
   background-color: #0c0d12;
+
   color: #ffffff;
+
   border: 1px solid #0c0d12;
 }
 
 .hero-cta-btn.primary-dark:hover {
   background-color: transparent;
+
   color: #0c0d12;
+
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(12, 13, 18, 0.08);
+
+  box-shadow:
+    0 10px 25px rgba(12, 13, 18, 0.08);
 }
+
+
+/* Secondary */
 
 .hero-cta-btn.secondary-outline {
   background-color: transparent;
+
   color: #0c0d12;
+
   border: 1px solid rgba(12, 13, 18, 0.15);
 }
 
 .hero-cta-btn.secondary-outline:hover {
   background-color: rgba(12, 13, 18, 0.03);
+
   border-color: #0c0d12;
+
   transform: translateY(-2px);
 }
 
+
+/* CTA arrow */
+
 .cta-arrow-glyph {
   font-size: 1.05rem;
-  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+
+  transition:
+    transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hero-cta-btn:hover .cta-arrow-glyph {
   transform: translate(2.5px, -2.5px);
 }
 
+
 /* ==========================================================================
-   RIGHT CONTENT: LAYERED OVERLAP ORBIT ARCHITECTURE
+   RIGHT ORBIT AREA
    ========================================================================== */
+
 .hero-right-canvas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
+
+  min-width: 0;
 }
+
+
+/* ==========================================================================
+   ORBIT ASSEMBLY
+   ========================================================================== */
 
 .avatar-orbit-assembly {
-  position: relative;
   width: 26rem;
   height: 26rem;
+
+  position: relative;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
 }
 
+
+/* Large desktop */
+
 @media (min-width: 1200px) {
+
   .avatar-orbit-assembly {
     width: 32rem;
     height: 32rem;
   }
+
 }
 
-/* Pure White Background Glow Spotlight Effect */
+
+/* ==========================================================================
+   ORBIT SPOTLIGHT
+   ========================================================================== */
+
 .orbit-spotlight-glow {
   position: absolute;
+
   width: 130%;
   height: 130%;
-  background: radial-gradient(circle, #d3cdcd 20%, rgba(255, 255, 255, 0) 70%);
+
+  background:
+    radial-gradient(
+      circle,
+      #d3cdcd 20%,
+      rgba(255, 255, 255, 0) 70%
+    );
+
   z-index: 0;
+
   pointer-events: none;
 }
 
-/* Orbit Path Guide Tracking Rings */
+
+/* ==========================================================================
+   ORBIT TRACKS
+   ========================================================================== */
+
 .celestial-orbit-ring {
   position: absolute;
-  border: 1px dashed rgba(12, 13, 18, 0.08);
+
+  border:
+    1px dashed rgba(12, 13, 18, 0.08);
+
   border-radius: 50%;
+
   pointer-events: none;
+
   z-index: 1;
 }
 
-.celestial-orbit-ring.inner-track { width: 68%; height: 68%; }
-.celestial-orbit-ring.outer-track { width: 94%; height: 94%; }
+.celestial-orbit-ring.inner-track {
+  width: 68%;
+  height: 68%;
+}
 
-/* CENTRAL IMAGE CONTAINER (Crisp Focus Frame Layer) */
+.celestial-orbit-ring.outer-track {
+  width: 94%;
+  height: 94%;
+}
+
+
+/* ==========================================================================
+   CENTRAL PROFILE IMAGE
+   ========================================================================== */
+
 .avatar-image-mask-frame {
   width: 14.5rem;
   height: 14.5rem;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid #ffffff;
-  box-shadow: 0 20px 50px rgba(12, 13, 18, 0.08);
-  background-color: #f1f5f9;
+
   position: relative;
-  z-index: 5; /* Positioned below badges so moving items cross directly on top of the portrait */
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 6px solid #ffffff;
+
+  background-color: #f1f5f9;
+
+  box-shadow:
+    0 20px 50px rgba(12, 13, 18, 0.08);
+
+  z-index: 5;
+
+  flex-shrink: 0;
 }
 
+
+.avatar-profile-photo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
 @media (min-width: 1200px) {
+
   .avatar-image-mask-frame {
     width: 17.5rem;
     height: 17.5rem;
   }
+
 }
 
-.avatar-profile-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* ==========================================================================
-   ORBIT REVOLUTION ENGINE (BADGES OVERLAPPING ON PORTRAIT TOP LAYER)
+   ORBITING BADGES
    ========================================================================== */
+
 .orbit-spinner-wrapper {
   position: absolute;
+
   border-radius: 50%;
+
   pointer-events: none;
+
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  align-items: flex-start; 
-  z-index: 10; /* CRITICAL: Places orbiting cards on top of the central profile photo */
+
+  z-index: 10;
 }
 
-.orbit-speed-inner-1, .orbit-speed-inner-2 { width: 68%; height: 68%; }
-.orbit-speed-outer-1, .orbit-speed-outer-2, .orbit-speed-outer-3 { width: 94%; height: 94%; }
 
-/* Micro Card Floating Badges Styling */
+.orbit-speed-inner-1,
+.orbit-speed-inner-2 {
+  width: 68%;
+  height: 68%;
+}
+
+
+.orbit-speed-outer-1,
+.orbit-speed-outer-2,
+.orbit-speed-outer-3 {
+  width: 94%;
+  height: 94%;
+}
+
+
+/* ==========================================================================
+   FLOATING BADGE
+   ========================================================================== */
+
 .floating-orbit-badge {
   width: 3.25rem;
   height: 3.25rem;
-  background: #ffffff;
-  border: 1px solid rgba(12, 13, 18, 0.05);
-  border-radius: 1.15rem;
+
+  margin-top: -1.625rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(12, 13, 18, 0.05);
+
+  border-radius: 1.15rem;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.05);
+
   pointer-events: auto;
-  margin-top: -1.625rem; /* Offsets center node perfectly to sit along dashed tracks */
+
+  flex-shrink: 0;
 }
+
 
 .floating-orbit-badge img {
   width: 1.65rem;
   height: 1.65rem;
+
   object-fit: contain;
 }
 
-/* Counter-balanced rotation algorithms keeps icons standing upright */
-.orbit-speed-outer-1 { animation: spin-forward 36s linear infinite; }
-.orbit-speed-outer-1 .floating-orbit-badge { animation: spin-backward 36s linear infinite; }
-
-.orbit-speed-inner-1 { animation: spin-backward 26s linear infinite; animation-delay: -5s; }
-.orbit-speed-inner-1 .floating-orbit-badge { animation: spin-backward 26s linear infinite; animation-delay: -5s; }
-
-.orbit-speed-outer-2 { animation: spin-forward 36s linear infinite; animation-delay: -12s; }
-.orbit-speed-outer-2 .floating-orbit-badge { animation: spin-backward 36s linear infinite; animation-delay: -12s; }
-
-.orbit-speed-inner-2 { animation: spin-backward 26s linear infinite; animation-delay: -18s; }
-.orbit-speed-inner-2 .floating-orbit-badge { animation: spin-backward 26s linear infinite; animation-delay: -18s; }
-
-.orbit-speed-outer-3 { animation: spin-forward 36s linear infinite; animation-delay: -24s; }
-.orbit-speed-outer-3 .floating-orbit-badge { animation: spin-backward 36s linear infinite; animation-delay: -24s; }
-
-@keyframes spin-forward {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes spin-backward {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
-}
 
 /* ==========================================================================
-   INFINITE BASE TICKER MARQUEE SYSTEM
+   ORBIT ANIMATIONS
    ========================================================================== */
-.hero-marquee-footer {
-  width: 100%;
-  background-color: #0c0d12;
-  padding: 1.5rem 0;
-  overflow: hidden;
-  margin-top: auto;
+
+.orbit-speed-outer-1 {
+  animation:
+    spin-forward 36s linear infinite;
 }
 
-.marquee-infinite-track {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  animation: continuous-horizontal-slide 26s linear infinite;
+.orbit-speed-outer-1 .floating-orbit-badge {
+  animation:
+    spin-backward 36s linear infinite;
 }
+
+
+.orbit-speed-inner-1 {
+  animation:
+    spin-backward 26s linear infinite;
+
+  animation-delay: -5s;
+}
+
+.orbit-speed-inner-1 .floating-orbit-badge {
+  animation:
+    spin-backward 26s linear infinite;
+
+  animation-delay: -5s;
+}
+
+
+.orbit-speed-outer-2 {
+  animation:
+    spin-forward 36s linear infinite;
+
+  animation-delay: -12s;
+}
+
+.orbit-speed-outer-2 .floating-orbit-badge {
+  animation:
+    spin-backward 36s linear infinite;
+
+  animation-delay: -12s;
+}
+
+
+.orbit-speed-inner-2 {
+  animation:
+    spin-backward 26s linear infinite;
+
+  animation-delay: -18s;
+}
+
+.orbit-speed-inner-2 .floating-orbit-badge {
+  animation:
+    spin-backward 26s linear infinite;
+
+  animation-delay: -18s;
+}
+
+
+.orbit-speed-outer-3 {
+  animation:
+    spin-forward 36s linear infinite;
+
+  animation-delay: -24s;
+}
+
+.orbit-speed-outer-3 .floating-orbit-badge {
+  animation:
+    spin-backward 36s linear infinite;
+
+  animation-delay: -24s;
+}
+
+
+/* ==========================================================================
+   KEYFRAMES
+   ========================================================================== */
+
+@keyframes spin-forward {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes spin-backward {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+/* ==========================================================================
+   INFINITE MARQUEE
+   ========================================================================== */
+
+.hero-marquee-footer {
+  width: 100%;
+
+  background-color: #0c0d12;
+
+  padding: 1.5rem 0;
+
+  overflow: hidden;
+
+  margin-top: auto;
+
+  flex-shrink: 0;
+}
+
+
+.marquee-infinite-track {
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  animation:
+    continuous-horizontal-slide 26s linear infinite;
+}
+
 
 .marquee-node-element {
   display: flex;
   align-items: center;
+
   gap: 2.5rem;
+
   padding-right: 2.5rem;
 }
 
+
 .marquee-string-label {
+  color: #ffffff;
+
   font-size: 0.95rem;
   font-weight: 700;
+
   letter-spacing: 0.1em;
-  color: #ffffff;
+
   text-transform: uppercase;
+
   white-space: nowrap;
 }
 
+
 .marquee-diamond-divider {
-  font-size: 0.85rem;
   color: #4b5563;
+
+  font-size: 0.85rem;
 }
 
+
 @keyframes continuous-horizontal-slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.3333%);
+  }
+
+}
+
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    padding-top: 5rem;
+  }
+
+  .hero-master-container {
+    min-height: auto;
+
+    padding:
+      3.5rem
+      2.5rem
+      4rem;
+
+    gap: 4rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
+
+  /* Content */
+
+  .hero-left-content {
+    width: 100%;
+  }
+
+  .hero-primary-name {
+    font-size: 4rem;
+  }
+
+  .hero-narrative-description {
+    max-width: 36rem;
+
+    font-size: 1.15rem;
+  }
+
+
+  /* Orbit */
+
+  .hero-right-canvas {
+    width: 100%;
+  }
+
+  .avatar-orbit-assembly {
+    width: 24rem;
+    height: 24rem;
+  }
+
+  .avatar-image-mask-frame {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .floating-orbit-badge {
+    width: 3rem;
+    height: 3rem;
+
+    margin-top: -1.5rem;
+  }
+
+  .floating-orbit-badge img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+  .hero-section {
+    width: 100%;
+
+    min-height: auto;
+
+    padding-top: 4.25rem;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ============================================================
+     MOBILE MAIN CONTAINER
+  ============================================================ */
+
+  .hero-master-container {
+    width: 100%;
+
+    min-height: auto;
+
+    padding:
+      2.25rem
+      1rem
+      2.75rem;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 2.75rem;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ============================================================
+     MOBILE LEFT CONTENT
+  ============================================================ */
+
+  .hero-left-content {
+    width: 100%;
+
+    align-items: flex-start;
+
+    text-align: left;
+  }
+
+
+  /* ============================================================
+     MOBILE NAME
+  ============================================================ */
+
+  .hero-primary-name {
+    width: 100%;
+
+    margin:
+      0
+      0
+      1rem;
+
+    font-size:
+      clamp(2.7rem, 13vw, 4rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+  }
+
+
+  /* ============================================================
+     MOBILE DESCRIPTION
+  ============================================================ */
+
+  .hero-narrative-description {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin:
+      0
+      0
+      1.65rem;
+
+    font-size:
+      clamp(0.92rem, 3.9vw, 1.08rem);
+
+    line-height: 1.68;
+
+    color: #52525b;
+  }
+
+
+  /* ============================================================
+     MOBILE CTA
+  ============================================================ */
+
+  .hero-actions-row {
+    width: 100%;
+
+    display: flex;
+
+    gap: 0.65rem;
+
+    flex-wrap: nowrap;
+  }
+
+
+  .hero-cta-btn {
+    min-height: 2.75rem;
+
+    flex: 1 1 0;
+
+    padding:
+      0.65rem
+      0.9rem;
+
+    font-size:
+      clamp(0.72rem, 3.2vw, 0.9rem);
+
+    white-space: nowrap;
+  }
+
+
+  .cta-arrow-glyph {
+    font-size: 0.95rem;
+  }
+
+
+  /* ============================================================
+     MOBILE ORBIT AREA
+  ============================================================ */
+
+  .hero-right-canvas {
+    width: 100%;
+
+    min-height: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /*
+     The key responsive change:
+     Instead of using a fixed 26rem orbit on phones,
+     the entire assembly scales according to viewport width.
+  */
+
+  .avatar-orbit-assembly {
+
+    width:
+      min(24rem, 88vw);
+
+    height:
+      min(24rem, 88vw);
+
+    max-width: 24rem;
+    max-height: 24rem;
+  }
+
+
+  /* ============================================================
+     MOBILE CENTER IMAGE
+  ============================================================ */
+
+  .avatar-image-mask-frame {
+
+    width:
+      clamp(9rem, 39vw, 12rem);
+
+    height:
+      clamp(9rem, 39vw, 12rem);
+
+    border-width: 4px;
+
+    box-shadow:
+      0 16px 38px rgba(12, 13, 18, 0.09);
+  }
+
+
+  /* ============================================================
+     MOBILE ORBIT BADGES
+  ============================================================ */
+
+  .floating-orbit-badge {
+
+    width:
+      clamp(2.35rem, 10vw, 3rem);
+
+    height:
+      clamp(2.35rem, 10vw, 3rem);
+
+    margin-top:
+      calc(clamp(2.35rem, 10vw, 3rem) / -2);
+
+    border-radius:
+      clamp(0.7rem, 3vw, 1rem);
+
+    box-shadow:
+      0 6px 18px rgba(0, 0, 0, 0.055);
+  }
+
+
+  .floating-orbit-badge img {
+
+    width:
+      clamp(1.15rem, 5vw, 1.5rem);
+
+    height:
+      clamp(1.15rem, 5vw, 1.5rem);
+  }
+
+
+  /* ============================================================
+     MOBILE SPOTLIGHT
+  ============================================================ */
+
+  .orbit-spotlight-glow {
+    width: 125%;
+    height: 125%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(211, 205, 205, 0.65) 15%,
+        rgba(255, 255, 255, 0) 70%
+      );
+  }
+
+
+  /* ============================================================
+     MOBILE MARQUEE
+  ============================================================ */
+
+  .hero-marquee-footer {
+
+    width: 100%;
+
+    padding:
+      1rem
+      0;
+
+    margin-top: 0;
+  }
+
+
+  .marquee-infinite-track {
+
+    animation-duration:
+      23s;
+  }
+
+
+  .marquee-node-element {
+
+    gap:
+      1.5rem;
+
+    padding-right:
+      1.5rem;
+  }
+
+
+  .marquee-string-label {
+
+    font-size:
+      0.68rem;
+
+    letter-spacing:
+      0.075em;
+  }
+
+
+  .marquee-diamond-divider {
+
+    font-size:
+      0.7rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 390px) {
+
+  .hero-section {
+    padding-top: 3.75rem;
+  }
+
+
+  .hero-master-container {
+
+    padding:
+      2rem
+      0.85rem
+      2.5rem;
+
+    gap:
+      2.4rem;
+  }
+
+
+  .hero-primary-name {
+
+    font-size:
+      clamp(2.45rem, 13vw, 3.2rem);
+  }
+
+
+  .hero-narrative-description {
+
+    font-size:
+      0.88rem;
+
+    line-height:
+      1.65;
+  }
+
+
+  .hero-actions-row {
+
+    gap:
+      0.5rem;
+  }
+
+
+  .hero-cta-btn {
+
+    padding:
+      0.62rem
+      0.65rem;
+
+    font-size:
+      0.7rem;
+  }
+
+
+  .cta-arrow-glyph {
+
+    font-size:
+      0.85rem;
+  }
+
+
+  .avatar-orbit-assembly {
+
+    width:
+      88vw;
+
+    height:
+      88vw;
+  }
+
+
+  .avatar-image-mask-frame {
+
+    width:
+      38vw;
+
+    height:
+      38vw;
+  }
+
+
+  .floating-orbit-badge {
+
+    width:
+      2.35rem;
+
+    height:
+      2.35rem;
+  }
+
+
+  .floating-orbit-badge img {
+
+    width:
+      1.15rem;
+
+    height:
+      1.15rem;
+  }
+
+
+  .hero-marquee-footer {
+
+    padding:
+      0.85rem
+      0;
+  }
+
+}
+
+
+/* ==========================================================================
+   VERY SMALL PHONES
+   ========================================================================== */
+
+@media (max-width: 340px) {
+
+  .hero-master-container {
+
+    padding-left:
+      0.7rem;
+
+    padding-right:
+      0.7rem;
+
+    gap:
+      2.15rem;
+  }
+
+
+  .hero-primary-name {
+
+    font-size:
+      2.3rem;
+  }
+
+
+  .hero-narrative-description {
+
+    font-size:
+      0.82rem;
+
+    line-height:
+      1.6;
+  }
+
+
+  .hero-cta-btn {
+
+    padding:
+      0.58rem
+      0.5rem;
+
+    font-size:
+      0.65rem;
+  }
+
+
+  .cta-arrow-glyph {
+
+    font-size:
+      0.78rem;
+  }
+
+
+  .avatar-orbit-assembly {
+
+    width:
+      88vw;
+
+    height:
+      88vw;
+  }
+
+
+  .avatar-image-mask-frame {
+
+    width:
+      37vw;
+
+    height:
+      37vw;
+  }
+
+
+  .floating-orbit-badge {
+
+    width:
+      2.15rem;
+
+    height:
+      2.15rem;
+
+    border-radius:
+      0.65rem;
+  }
+
+
+  .floating-orbit-badge img {
+
+    width:
+      1rem;
+
+    height:
+      1rem;
+  }
+
+
+  .marquee-string-label {
+
+    font-size:
+      0.6rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   REDUCE MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .orbit-speed-outer-1,
+  .orbit-speed-outer-2,
+  .orbit-speed-outer-3,
+  .orbit-speed-inner-1,
+  .orbit-speed-inner-2,
+  .orbit-speed-outer-1 .floating-orbit-badge,
+  .orbit-speed-outer-2 .floating-orbit-badge,
+  .orbit-speed-outer-3 .floating-orbit-badge,
+  .orbit-speed-inner-1 .floating-orbit-badge,
+  .orbit-speed-inner-2 .floating-orbit-badge,
+  .marquee-infinite-track {
+
+    animation: none;
+  }
+
 }
